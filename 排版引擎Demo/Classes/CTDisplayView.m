@@ -12,6 +12,10 @@
 
 @implementation CTDisplayView
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
 #pragma mark - Property
 
 - (void)setText:(NSString *)text

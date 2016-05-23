@@ -15,7 +15,7 @@
 #import <UIKit/UIKit.h>
 
 
-static NSMutableArray <id>*parsers = nil;
+static NSMutableArray <Class>*parsers = nil;
 
 
 @interface CTTextParser ()
@@ -55,7 +55,7 @@ static NSMutableArray <id>*parsers = nil;
                 continue;
             }
             
-            [parsers addObject:[[classes[i] alloc] init]];
+            [parsers addObject:classes[i]];
         }
     }
     
@@ -72,7 +72,7 @@ static NSMutableArray <id>*parsers = nil;
     ////////////////////
     [parsers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         @autoreleasepool {
-            [obj parserWithAttributedString:attributedString style:style];
+            [[[obj alloc] init] parserWithAttributedString:attributedString style:style];
         }
     }];
 }

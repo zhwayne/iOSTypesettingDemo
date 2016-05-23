@@ -17,9 +17,9 @@
         _textFont = [UIFont systemFontOfSize:16];
         _fontSpace = 0;
         _lineSpace = 0;
-        _URLColor = [UIColor colorWithRed:0.4 green:0.6 blue:1.0 alpha:1.0];
-        _atColor = [UIColor colorWithRed:0.4 green:0.6 blue:1.0 alpha:1.0];
-        _topicColor = [UIColor colorWithRed:0.4 green:0.6 blue:1.0 alpha:1.0];
+        _URLColor = [UIColor colorWithRed:0.4 green:0.6 blue:0.8 alpha:1.0];
+        _atColor = [UIColor colorWithRed:0.4 green:0.6 blue:0.8 alpha:1.0];
+        _topicColor = [UIColor colorWithRed:0.4 green:0.6 blue:0.8 alpha:1.0];
     }
     
     return self;

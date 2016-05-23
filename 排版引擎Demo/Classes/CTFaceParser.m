@@ -14,10 +14,6 @@
 
 @implementation CTFaceParser
 
-- (void)dealloc {
-    NSLog(@"%s", __func__);
-}
-
 - (void)parserWithAttributedString:(NSMutableAttributedString *)attributedString style:(CTTextStyle *)style {
     NSMutableString * attStr = attributedString.mutableString;
     NSError *error = nil;
@@ -74,7 +70,6 @@
         runItem.size = CGSizeMake(style.textFont.ascender + fabs(style.textFont.descender / 4),
                                style.textFont.ascender - fabs(style.textFont.descender / 4));
         runItem.descender = fabs(style.textFont.descender / 2);
-        NSLog(@"-%p", runItem);
         CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (void *)CFBridgingRetain(runItem));
         CFAttributedStringSetAttribute((CFMutableAttributedStringRef)replacementMAS,
                                        CFRangeMake(0, 1),
